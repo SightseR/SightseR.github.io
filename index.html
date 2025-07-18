@@ -1,91 +1,213 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Your Name – Software Engineer</title>
-  <link href="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" rel="preload" as="script">
-  <script type="module" crossorigin src="/your-repo-name/assets/index-BQW_stuO.js"></script>
-  <link rel="stylesheet" crossorigin href="/your-repo-name/assets/index-BXpYcoyq.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kasun Akalanka – Software Engineer</title>
+  <link href="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" rel="preload" as="script" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <style>
+    /* Custom styles for theme and animations */
+    [data-theme="dark"] {
+      --bg-color: #0f172a;
+      --text-color: #e5e7eb;
+      --accent-color: #14b8a6;
+      --card-bg: #1e293b;
+      --border-color: #475569;
+    }
+    [data-theme="light"] {
+      --bg-color: #f3f4f6;
+      --text-color: #1f2937;
+      --accent-color: #0ea5e9;
+      --card-bg: #ffffff;
+      --border-color: #d1d5db;
+    }
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: all 0.3s ease;
+    }
+    .nav-link:hover {
+      color: var(--accent-color);
+      transform: translateY(-2px);
+    }
+    .hamburger div {
+      transition: all 0.3s ease;
+    }
+    .hamburger.active .bar1 {
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    .hamburger.active .bar2 {
+      opacity: 0;
+    }
+    .hamburger.active .bar3 {
+      transform: rotate(45deg) translate(-5px, -6px);
+    }
+  </style>
 </head>
-<body class="bg-[#0f172a] text-gray-200 font-sans">
-  <div class="max-w-4xl mx-auto px-6 py-10">
+<body class="font-sans min-h-screen">
+  <!-- Header with Sticky Navigation -->
+  <header class="sticky top-0 z-50 bg-[var(--bg-color)] bg-opacity-90 backdrop-blur-md shadow-md">
+    <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <!-- Logo/Name -->
+      <div class="flex items-center space-x-3">
+        <img src="https://avatars.githubusercontent.com/u/1?v=4" alt="Profile Picture" class="w-10 h-10 rounded-full border-2 border-[var(--accent-color)]" />
+        <a href="#" class="text-xl font-bold text-[var(--text-color)]">Kasun Akalanka</a>
+      </div>
 
-    <!-- Header -->
-    <header class="text-center">
-      <img src="https://avatars.githubusercontent.com/u/1?v=4" alt="Profile Picture"
-        class="w-28 h-28 mx-auto rounded-full border-4 border-teal-500 shadow-lg" />
-      <h1 class="text-4xl font-bold mt-4 text-white">Kasun Akalanka</h1>
-      <p class="text-teal-400 text-lg mt-1">Software Engineer · Full Stack Developer</p>
-      <div class="flex justify-center space-x-5 mt-4 text-sm">
-        <a href="https://github.com/yourusername" class="hover:text-teal-400 flex items-center gap-1">
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center space-x-6">
+        <a href="#about" class="nav-link text-[var(--text-color)] transition-all">About</a>
+        <a href="#skills" class="nav-link text-[var(--text-color)] transition-all">Skills</a>
+        <a href="#projects" class="nav-link text-[var(--text-color)] transition-all">Projects</a>
+        <a href="https://github.com/yourusername" class="nav-link text-[var(--text-color)] transition-all flex items-center gap-1">
           <i data-lucide="github" class="w-4 h-4"></i> GitHub
         </a>
-        <a href="https://linkedin.com/in/yourusername" class="hover:text-teal-400 flex items-center gap-1">
+        <a href="https://linkedin.com/in/yourusername" class="nav-link text-[var(--text-color)] transition-all flex items-center gap-1">
           <i data-lucide="linkedin" class="w-4 h-4"></i> LinkedIn
         </a>
-        <a href="mailto:you@example.com" class="hover:text-teal-400 flex items-center gap-1">
+        <a href="mailto:you@example.com" class="nav-link text-[var(--text-color)] transition-all flex items-center gap-1">
           <i data-lucide="mail" class="w-4 h-4"></i> Email
         </a>
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" class="p-2 rounded-full hover:bg-[var(--card-bg)] transition">
+          <i data-lucide="moon" class="w-5 h-5"></i>
+        </button>
       </div>
-    </header>
+
+      <!-- Hamburger Menu -->
+      <div class="md:hidden">
+        <button class="hamburger flex flex-col justify-center items-center space-y-1.5 w-8 h-8">
+          <div class="bar1 w-8 h-0.5 bg-[var(--text-color)] rounded"></div>
+          <div class="bar2 w-8 h-0.5 bg-[var(--text-color)] rounded"></div>
+          <div class="bar3 w-8 h-0.5 bg-[var(--text-color)] rounded"></div>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[var(--card-bg)] shadow-lg">
+      <div class="flex flex-col items-center space-y-4 py-6">
+        <a href="#about" class="nav-link text-[var(--text-color)] transition-all text-lg">About</a>
+        <a href="#skills" class="nav-link text-[var(--text-color)] transition-all text-lg">Skills</a>
+        <a href="#projects" class="nav-link text-[var(--text-color)] transition-all text-lg">Projects</a>
+        <a href="https://github.com/yourusername" class="nav-link text-[var(--text-color)] transition-all flex items-center gap-1 text-lg">
+          <i data-lucide="github" class="w-5 h-5"></i> GitHub
+        </a>
+        <a href="https://linkedin.com/in/yourusername" class="nav-link text-[var(--text-color)] transition-all flex items-center gap-1 text-lg">
+          <i data-lucide="linkedin" class="w-5 h-5"></i> LinkedIn
+        </a>
+        <a href="mailto:you@example.com" class="nav-link text-[var(--text-color)] transition-all flex items-center gap-1 text-lg">
+          <i data-lucide="mail" class="w-5 h-5"></i> Email
+        </a>
+        <button id="mobile-theme-toggle" class="p-2 rounded-full hover:bg-[var(--bg-color)] transition">
+          <i data-lucide="moon" class="w-5 h-5"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-6xl mx-auto px-6 py-12">
+    <!-- Hero Section -->
+    <section class="text-center py-12">
+      <img src="https://avatars.githubusercontent.com/u/1?v=4" alt="Profile Picture" class="w-32 h-32 mx-auto rounded-full border-4 border-[var(--accent-color)] shadow-lg transform hover:scale-105 transition" />
+      <h1 class="text-4xl md:text-5xl font-bold mt-6 text-[var(--text-color)]">Kasun Akalanka</h1>
+      <p class="text-[var(--accent-color)] text-lg md:text-xl mt-2">Software Engineer · Full Stack Developer</p>
+    </section>
 
     <!-- About -->
-    <section class="mt-12">
-      <h2 class="text-xl font-semibold text-teal-300 border-b border-teal-600 pb-1 mb-3">About Me</h2>
-      <p class="leading-relaxed text-gray-300">
+    <section id="about" class="mt-16">
+      <h2 class="text-2xl font-semibold text-[var(--accent-color)] border-b border-[var(--border-color)] pb-2 mb-6">About Me</h2>
+      <p class="leading-relaxed text-[var(--text-color)] text-base md:text-lg">
         I’m a software engineer focused on building high-impact web applications with clean, maintainable code. I specialize in full-stack JavaScript, TypeScript, and cloud-native technologies.
       </p>
     </section>
 
     <!-- Skills -->
-    <section class="mt-10">
-      <h2 class="text-xl font-semibold text-teal-300 border-b border-teal-600 pb-1 mb-3">Skills & Tools</h2>
-      <div class="flex flex-wrap gap-2">
-        <span class="bg-teal-700 text-sm px-3 py-1 rounded-full">JavaScript</span>
-        <span class="bg-teal-700 text-sm px-3 py-1 rounded-full">TypeScript</span>
-        <span class="bg-teal-700 text-sm px-3 py-1 rounded-full">React</span>
-        <span class="bg-teal-700 text-sm px-3 py-1 rounded-full">Next.js</span>
-        <span class="bg-teal-700 text-sm px-3 py-1 rounded-full">Node.js</span>
-        <span class="bg-teal-700 text-sm px-3 py-1 rounded-full">Tailwind CSS</span>
-        <span class="bg-teal-700 text-sm px-3 py-1 rounded-full">Docker</span>
-        <span class="bg-teal-700 text-sm px-3 py-1 rounded-full">AWS</span>
-        <span class="bg-teal-700 text-sm px-3 py-1 rounded-full">PostgreSQL</span>
+    <section id="skills" class="mt-12">
+      <h2 class="text-2xl font-semibold text-[var(--accent-color)] border-b border-[var(--border-color)] pb-2 mb-6">Skills & Tools</h2>
+      <div class="flex flex-wrap gap-3">
+        <span class="bg-[វ0.4em text-sm px-4 py-2 rounded-full bg-[var(--card-bg)] text-[var(--text-color)] hover:bg-[var(--accent-color)] hover:text-[var(--card-bg)] transition">JavaScript</span>
+        <span class="bg-[var(--card-bg)] text-sm px-4 py-2 rounded-full hover:bg-[var(--accent-color)] hover:text-[var(--card-bg)] transition">TypeScript</span>
+        <span class="bg-[var(--card-bg)] text-sm px-4 py-2 rounded-full hover:bg-[var(--accent-color)] hover:text-[var(--card-bg)] transition">React</span>
+        <span class="bg-[var(--card-bg)] text-sm px-4 py-2 rounded-full hover:bg-[var(--accent-color)] hover:text-[var(--card-bg)] transition">Next.js</span>
+        <span class="bg-[var(--card-bg)] text-sm px-4 py-2 rounded-full hover:bg-[var(--accent-color)] hover:text-[var(--card-bg)] transition">Node.js</span>
+        <span class="bg-[var(--card-bg)] text-sm px-4 py-2 rounded-full hover:bg-[var(--accent-color)] hover:text-[var(--card-bg)] transition">Tailwind CSS</span>
+        <span class="bg-[var(--card-bg)] text-sm px-4 py-2 rounded-full hover:bg-[var(--accent-color)] hover:text-[var(--card-bg)] transition">Docker</span>
+        <span class="bg-[var(--card-bg)] text-sm px-4 py-2 rounded-full hover:bg-[var(--accent-color)] hover:text-[var(--card-bg)] transition">AWS</span>
+        <span class="bg-[var(--card-bg)] text-sm px-4 py-2 rounded-full hover:bg-[var(--accent-color)] hover:text-[var(--card-bg)] transition">PostgreSQL</span>
       </div>
     </section>
 
     <!-- Projects -->
-    <section class="mt-10">
-      <h2 class="text-xl font-semibold text-teal-300 border-b border-teal-600 pb-1 mb-5">Projects</h2>
-
+    <section id="projects" class="mt-12">
+      <h2 class="text-2xl font-semibold text-[var(--accent-color)] border-b border-[var(--border-color)] pb-2 mb-6">Projects</h2>
       <div class="space-y-6">
         <!-- Project 1 -->
-        <div class="bg-slate-800 rounded-xl p-5 shadow hover:shadow-lg transition">
-          <h3 class="text-lg font-bold text-white">DevTracker</h3>
-          <p class="text-gray-400 text-sm mt-1">A developer productivity dashboard with GitHub integration, built using React, Express, and MongoDB.</p>
-          <a href="https://github.com/yourusername/devtracker" target="_blank"
-            class="text-teal-400 inline-block mt-2 hover:underline">View on GitHub →</a>
+        <div class="bg-[var(--card-bg)] rounded-xl p-6 shadow-lg hover:shadow-xl transition transform hover:-translate-y-1">
+          <h3 class="text-xl font-bold text-[var(--text-color)]">DevTracker</h3>
+          <p class="text-[var(--text-color)] opacity-80 text-sm mt-2">A developer productivity dashboard with GitHub integration, built using React, Express, and MongoDB.</p>
+          <a href="https://github.com/yourusername/devtracker" target="_blank" class="text-[var(--accent-color)] inline-block mt-3 hover:underline">View on GitHub →</a>
         </div>
-
         <!-- Project 2 -->
-        <div class="bg-slate-800 rounded-xl p-5 shadow hover:shadow-lg transition">
-          <h3 class="text-lg font-bold text-white">PortFlow</h3>
-          <p class="text-gray-400 text-sm mt-1">A beautiful portfolio template generator powered by Next.js and Tailwind. Deployed via Vercel.</p>
-          <a href="https://github.com/yourusername/portflow" target="_blank"
-            class="text-teal-400 inline-block mt-2 hover:underline">View on GitHub →</a>
+        <div class="bg-[var(--card-bg)] rounded-xl p-6 shadow-lg hover:shadow-xl transition transform hover:-translate-y-1">
+          <h3 class="text-xl font-bold text-[var(--text-color)]">PortFlow</h3>
+          <p class="text-[var(--text-color)] opacity-80 text-sm mt-2">A beautiful portfolio template generator powered by Next.js and Tailwind. Deployed via Vercel.</p>
+          <a href="https://github.com/yourusername/portflow" target="_blank" class="text-[var(--accent-color)] inline-block mt-3 hover:underline">View on GitHub →</a>
         </div>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="mt-16 text-center text-gray-500 text-sm">
-      &copy; 2025 Your Name. Built with Tailwind CSS & Vite.
+    <footer class="mt-16 text-center text-[var(--text-color)] opacity-60 text-sm">
+      © 2025 Kasun Akalanka. Built with Tailwind CSS & Vite.
     </footer>
-  </div>
+  </main>
 
   <script src="https://unpkg.com/lucide@latest"></script>
   <script>
     lucide.createIcons();
+
+    // Hamburger Menu Toggle
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('#mobile-menu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Theme Toggle
+    const themeToggle = document.querySelector('#theme-toggle');
+    const mobileThemeToggle = document.querySelector('#mobile-theme-toggle');
+    const html = document.documentElement;
+
+    function toggleTheme() {
+      const currentTheme = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', currentTheme);
+      const icon = currentTheme === 'dark' ? 'moon' : 'sun';
+      themeToggle.querySelector('i').setAttribute('data-lucide', icon);
+      mobileThemeToggle.querySelector('i').setAttribute('data-lucide', icon);
+      lucide.createIcons();
+    }
+
+    themeToggle.addEventListener('click', toggleTheme);
+    mobileThemeToggle.addEventListener('click', toggleTheme);
+
+    // Smooth Scroll for Nav Links
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', (e) => {
+        if (link.getAttribute('href').startsWith('#')) {
+          e.preventDefault();
+          const targetId = link.getAttribute('href').substring(1);
+          const targetElement = document.getElementById(targetId);
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+          // Close mobile menu after clicking
+          hamburger.classList.remove('active');
+          mobileMenu.classList.add('hidden');
+        }
+      });
+    });
   </script>
 </body>
 </html>
