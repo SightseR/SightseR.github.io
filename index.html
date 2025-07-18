@@ -3,51 +3,89 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Your Name - Software Engineer</title>
-  <script type="module" crossorigin src="/your-repo-name/assets/index-DjS1YZif.js"></script>
-  <link rel="stylesheet" crossorigin href="/your-repo-name/assets/index-Bu0GiXOT.css">
+  <title>Your Name – Software Engineer</title>
+  <link href="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" rel="preload" as="script">
+  <script type="module" crossorigin src="/your-repo-name/assets/index-BQW_stuO.js"></script>
+  <link rel="stylesheet" crossorigin href="/your-repo-name/assets/index-BXpYcoyq.css">
 </head>
-<body class="bg-gray-900 text-white font-sans">
-  <div class="max-w-3xl mx-auto px-6 py-12">
+<body class="bg-[#0f172a] text-gray-200 font-sans">
+  <div class="max-w-4xl mx-auto px-6 py-10">
+
+    <!-- Header -->
     <header class="text-center">
-      <img src="https://avatars.githubusercontent.com/u/1?v=4" alt="Avatar" class="w-28 h-28 rounded-full mx-auto border-4 border-green-400" />
-      <h1 class="text-4xl font-bold mt-4">Your Name</h1>
-      <p class="text-green-300 text-lg">Software Engineer • Full Stack Developer</p>
-      <div class="mt-3 space-x-4">
-        <a href="https://github.com/yourusername" class="text-green-400 hover:underline">GitHub</a>
-        <a href="https://linkedin.com/in/yourusername" class="text-green-400 hover:underline">LinkedIn</a>
-        <a href="mailto:your@email.com" class="text-green-400 hover:underline">Email</a>
+      <img src="https://avatars.githubusercontent.com/u/1?v=4" alt="Profile Picture"
+        class="w-28 h-28 mx-auto rounded-full border-4 border-teal-500 shadow-lg" />
+      <h1 class="text-4xl font-bold mt-4 text-white">Your Name</h1>
+      <p class="text-teal-400 text-lg mt-1">Software Engineer · Full Stack Developer</p>
+      <div class="flex justify-center space-x-5 mt-4 text-sm">
+        <a href="https://github.com/yourusername" class="hover:text-teal-400 flex items-center gap-1">
+          <i data-lucide="github" class="w-4 h-4"></i> GitHub
+        </a>
+        <a href="https://linkedin.com/in/yourusername" class="hover:text-teal-400 flex items-center gap-1">
+          <i data-lucide="linkedin" class="w-4 h-4"></i> LinkedIn
+        </a>
+        <a href="mailto:you@example.com" class="hover:text-teal-400 flex items-center gap-1">
+          <i data-lucide="mail" class="w-4 h-4"></i> Email
+        </a>
       </div>
     </header>
 
+    <!-- About -->
+    <section class="mt-12">
+      <h2 class="text-xl font-semibold text-teal-300 border-b border-teal-600 pb-1 mb-3">About Me</h2>
+      <p class="leading-relaxed text-gray-300">
+        I’m a software engineer focused on building high-impact web applications with clean, maintainable code. I specialize in full-stack JavaScript, TypeScript, and cloud-native technologies.
+      </p>
+    </section>
+
+    <!-- Skills -->
     <section class="mt-10">
-      <h2 class="text-2xl border-b border-green-400 pb-1 mb-3">About Me</h2>
-      <p>I’m a software engineer with experience in building full-stack applications using modern technologies. I enjoy learning, building, and sharing knowledge.</p>
-    </section>
-
-    <section class="mt-8">
-      <h2 class="text-2xl border-b border-green-400 pb-1 mb-3">Skills</h2>
+      <h2 class="text-xl font-semibold text-teal-300 border-b border-teal-600 pb-1 mb-3">Skills & Tools</h2>
       <div class="flex flex-wrap gap-2">
-        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">JavaScript</span>
-        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">React</span>
-        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Node.js</span>
-        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Tailwind CSS</span>
-        <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Docker</span>
+        <span class="bg-teal-700 text-sm px-3 py-1 rounded-full">JavaScript</span>
+        <span class="bg-teal-700 text-sm px-3 py-1 rounded-full">TypeScript</span>
+        <span class="bg-teal-700 text-sm px-3 py-1 rounded-full">React</span>
+        <span class="bg-teal-700 text-sm px-3 py-1 rounded-full">Next.js</span>
+        <span class="bg-teal-700 text-sm px-3 py-1 rounded-full">Node.js</span>
+        <span class="bg-teal-700 text-sm px-3 py-1 rounded-full">Tailwind CSS</span>
+        <span class="bg-teal-700 text-sm px-3 py-1 rounded-full">Docker</span>
+        <span class="bg-teal-700 text-sm px-3 py-1 rounded-full">AWS</span>
+        <span class="bg-teal-700 text-sm px-3 py-1 rounded-full">PostgreSQL</span>
       </div>
     </section>
 
-    <section class="mt-8">
-      <h2 class="text-2xl border-b border-green-400 pb-1 mb-3">Projects</h2>
-      <div class="bg-gray-800 p-4 rounded-xl shadow mb-4">
-        <h3 class="text-xl font-semibold">Cool Project</h3>
-        <p class="text-sm">A MERN stack app that helps users track their habits and goals.</p>
-        <a href="https://github.com/yourusername/cool-project" class="text-green-400 hover:underline">View on GitHub</a>
+    <!-- Projects -->
+    <section class="mt-10">
+      <h2 class="text-xl font-semibold text-teal-300 border-b border-teal-600 pb-1 mb-5">Projects</h2>
+
+      <div class="space-y-6">
+        <!-- Project 1 -->
+        <div class="bg-slate-800 rounded-xl p-5 shadow hover:shadow-lg transition">
+          <h3 class="text-lg font-bold text-white">DevTracker</h3>
+          <p class="text-gray-400 text-sm mt-1">A developer productivity dashboard with GitHub integration, built using React, Express, and MongoDB.</p>
+          <a href="https://github.com/yourusername/devtracker" target="_blank"
+            class="text-teal-400 inline-block mt-2 hover:underline">View on GitHub →</a>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="bg-slate-800 rounded-xl p-5 shadow hover:shadow-lg transition">
+          <h3 class="text-lg font-bold text-white">PortFlow</h3>
+          <p class="text-gray-400 text-sm mt-1">A beautiful portfolio template generator powered by Next.js and Tailwind. Deployed via Vercel.</p>
+          <a href="https://github.com/yourusername/portflow" target="_blank"
+            class="text-teal-400 inline-block mt-2 hover:underline">View on GitHub →</a>
+        </div>
       </div>
     </section>
 
-    <footer class="mt-12 text-center text-gray-500 text-sm">
-      &copy; 2025 Your Name. All rights reserved.
+    <!-- Footer -->
+    <footer class="mt-16 text-center text-gray-500 text-sm">
+      &copy; 2025 Your Name. Built with Tailwind CSS & Vite.
     </footer>
   </div>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
 </body>
 </html>
