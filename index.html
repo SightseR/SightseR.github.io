@@ -1,172 +1,235 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" class="scroll-smooth" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kasun Akalanka – Software Engineer</title>
-  <link href="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" rel="preload" as="script" />
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  <style>
-    /* Custom styles for theme and animations */
-    [data-theme="dark"] {
-      --bg-color: #0f172a;
-      --text-color: #e5e7eb;
-      --accent-color: #14b8a6;
-      --card-bg: #1e293b;
-      --border-color: #475569;
-    }
-    [data-theme="light"] {
-      --bg-color: #f3f4f6;
-      --text-color: #1f2937;
-      --accent-color: #0ea5e9;
-      --card-bg: #ffffff;
-      --border-color: #d1d5db;
-    }
-    body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      transition: all 0.3s ease;
-    }
-    .nav-link:hover {
-      color: var(--accent-color);
-      transform: translateY(-2px);
-    }
-    .hamburger div {
-      transition: all 0.3s ease;
-    }
-    .hamburger.active .bar1 {
-      transform: rotate(-45deg) translate(-5px, 6px);
-    }
-    .hamburger.active .bar2 {
-      opacity: 0;
-    }
-    .hamburger.active .bar3 {
-      transform: rotate(45deg) translate(-5px, -6px);
-    }
-  </style>
+  <title>Kasun Akalanka - Software Engineer</title>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" crossorigin href="/assets/index-Bev0D8UC.css">
 </head>
-<body class="font-sans min-h-screen">
-  <!-- Header with Sticky Navigation -->
-  <header class="sticky top-0 z-50 bg-[var(--bg-color)] bg-opacity-90 backdrop-blur-md shadow-md">
-    <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-      <!-- Logo/Name -->
+<body class="font-sans min-h-screen antialiased bg-bg-color text-text-color">
+
+  <header class="fixed top-0 left-0 w-full z-50 bg-bg-color shadow-lg" style="height: var(--header-height);">
+    <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between h-full">
       <div class="flex items-center space-x-3">
-        <img src="https://avatars.githubusercontent.com/u/1?v=4" alt="Profile Picture" class="w-10 h-10 rounded-full border-2 border-[var(--accent-color)]" />
-        <a href="#" class="text-xl font-bold text-[var(--text-color)]">Kasun Akalanka</a>
+        <img
+          src="https://media.licdn.com/dms/image/v2/D5603AQGUW5mGRlFrKg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1687421272007?e=1755734400&v=beta&t=K2qkTVqnDV0Dmok3fE7akRPw2YPNbnn2rI0gzd79iDs"
+          alt="Profile Picture"
+          class="w-10 h-10 rounded-full border-2 border-accent-color transform hover:scale-110 transition-transform duration-300"
+        />
+        <a href="#" class="font-bold text-text-color hover:text-accent-color transition-colors duration-300">
+          Kasun Akalanka
+        </a>
       </div>
 
-      <!-- Desktop Menu -->
       <div class="hidden md:flex items-center space-x-6">
-        <a href="#about" class="nav-link text-[var(--text-color)] transition-all">About</a>
-        <a href="#skills" class="nav-link text-[var(--text-color)] transition-all">Skills</a>
-        <a href="#projects" class="nav-link text-[var(--text-color)] transition-all">Projects</a>
-        <a href="https://github.com/yourusername" class="nav-link text-[var(--text-color)] transition-all flex items-center gap-1">
-          <i data-lucide="github" class="w-4 h-4"></i> GitHub
-        </a>
-        <a href="https://linkedin.com/in/yourusername" class="nav-link text-[var(--text-color)] transition-all flex items-center gap-1">
-          <i data-lucide="linkedin" class="w-4 h-4"></i> LinkedIn
-        </a>
-        <a href="mailto:you@example.com" class="nav-link text-[var(--text-color)] transition-all flex items-center gap-1">
-          <i data-lucide="mail" class="w-4 h-4"></i> Email
-        </a>
-        <!-- Theme Toggle -->
-        <button id="theme-toggle" class="p-2 rounded-full hover:bg-[var(--card-bg)] transition">
-          <i data-lucide="moon" class="w-5 h-5"></i>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="https://github.com/sightser" class="nav-link flex items-center gap-1"><i data-lucide="github" class="w-4 h-4"></i> GitHub</a>
+        <a href="https://linkedin.com/in/kasun-akalanka-k-vithanage" class="nav-link flex items-center gap-1"><i data-lucide="linkedin" class="w-4 h-4"></i> LinkedIn</a>
+        <a href="mailto:k3akalanka@gmail.com" class="nav-link flex items-center gap-1"><i data-lucide="mail" class="w-4 h-4"></i> Email</a>
+        <button id="theme-toggle" class="p-2 rounded-full bg-card-bg hover:bg-accent-color hover:text-white transition-colors duration-300">
+          <i data-lucide="sun" class="theme-icon dark-icon"></i>
+          <i data-lucide="moon" class="theme-icon light-icon hidden"></i>
         </button>
       </div>
 
-      <!-- Hamburger Menu -->
-      <div class="md:hidden">
+      <div class="md:hidden flex items-center space-x-4">
+        <button id="mobile-theme-toggle" class="p-2 rounded-full bg-card-bg hover:bg-accent-color hover:text-white transition-colors duration-300">
+          <i data-lucide="sun" class="theme-icon dark-icon"></i>
+          <i data-lucide="moon" class="theme-icon light-icon hidden"></i>
+        </button>
         <button class="hamburger flex flex-col justify-center items-center space-y-1.5 w-8 h-8">
-          <div class="bar1 w-8 h-0.5 bg-[var(--text-color)] rounded"></div>
-          <div class="bar2 w-8 h-0.5 bg-[var(--text-color)] rounded"></div>
-          <div class="bar3 w-8 h-0.5 bg-[var(--text-color)] rounded"></div>
+          <div class="bar1 w-8 h-0.5 bg-text-color rounded"></div>
+          <div class="bar2 w-8 h-0.5 bg-text-color rounded"></div>
+          <div class="bar3 w-8 h-0.5 bg-text-color rounded"></div>
         </button>
       </div>
     </nav>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-[var(--card-bg)] shadow-lg">
-      <div class="flex flex-col items-center space-y-4 py-6">
-        <a href="#about" class="nav-link text-[var(--text-color)] transition-all text-lg">About</a>
-        <a href="#skills" class="nav-link text-[var(--text-color)] transition-all text-lg">Skills</a>
-        <a href="#projects" class="nav-link text-[var(--text-color)] transition-all text-lg">Projects</a>
-        <a href="https://github.com/yourusername" class="nav-link text-[var(--text-color)] transition-all flex items-center gap-1 text-lg">
-          <i data-lucide="github" class="w-5 h-5"></i> GitHub
-        </a>
-        <a href="https://linkedin.com/in/yourusername" class="nav-link text-[var(--text-color)] transition-all flex items-center gap-1 text-lg">
-          <i data-lucide="linkedin" class="w-5 h-5"></i> LinkedIn
-        </a>
-        <a href="mailto:you@example.com" class="nav-link text-[var(--text-color)] transition-all flex items-center gap-1 text-lg">
-          <i data-lucide="mail" class="w-5 h-5"></i> Email
-        </a>
-        <button id="mobile-theme-toggle" class="p-2 rounded-full hover:bg-[var(--bg-color)] transition">
-          <i data-lucide="moon" class="w-5 h-5"></i>
-        </button>
+    <div id="mobile-menu" class="hidden md:hidden bg-card-bg shadow-lg py-4">
+      <div class="flex flex-col items-center space-y-4">
+        <a href="#about" class="nav-link text-lg py-2">About</a>
+        <a href="#skills" class="nav-link text-lg py-2">Skills</a>
+        <a href="#experience" class="nav-link text-lg py-2">Experience</a>
+        <a href="#education" class="nav-link text-lg py-2">Education</a>
+        <a href="#projects" class="nav-link text-lg py-2">Projects</a>
+        <a href="https://github.com/sightser" class="nav-link flex items-center gap-2 text-lg py-2"><i data-lucide="github" class="w-5 h-5"></i> GitHub</a>
+        <a href="https://linkedin.com/in/kasun-akalanka-k-vithanage" class="nav-link flex items-center gap-2 text-lg py-2"><i data-lucide="linkedin" class="w-5 h-5"></i> LinkedIn</a>
+        <a href="mailto:k3akalanka@gmail.com" class="nav-link flex items-center gap-2 text-lg py-2"><i data-lucide="mail" class="w-5 h-5"></i> Email</a>
       </div>
     </div>
   </header>
 
-  <!-- Main Content -->
-  <main class="max-w-6xl mx-auto px-6 py-12">
-    <!-- Hero Section -->
-    <section class="text-center py-12">
-      <img src="https://avatars.githubusercontent.com/u/1?v=4" alt="Profile Picture" class="w-32 h-32 mx-auto rounded-full border-4 border-[var(--accent-color)] shadow-lg transform hover:scale-105 transition" />
-      <h1 class="text-4xl md:text-5xl font-bold mt-6 text-[var(--text-color)]">Kasun Akalanka</h1>
-      <p class="text-[var(--accent-color)] text-lg md:text-xl mt-2">Software Engineer · Full Stack Developer</p>
+  <main class="max-w-6xl mx-auto px-6 py-12 main-content-padding">
+    <section class="text-center py-16 flex flex-col items-center">
+      <img src="https://media.licdn.com/dms/image/v2/D5603AQGUW5mGRlFrKg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1687421272007?e=1755734400&v=beta&t=K2qkTVqnDV0Dmok3fE7akRPw2YPNbnn2rI0gzd79iDs" alt="Profile Picture" class="w-40 h-40 mx-auto rounded-full border-4 border-accent-color shadow-xl transform hover:scale-105 transition-transform duration-300 ease-in-out" />
+      <h1 class="text-5xl md:text-6xl font-bold mt-8 text-text-color tracking-tight">Kasun Akalanka</h1>
+      <p class="text-accent-color text-xl md:text-xl mt-3 font-semibold">Software Engineer · Full Stack Developer</p>
+      <div class="flex space-x-4 mt-6">
+        <a href="https://github.com/sightser" target="_blank" class="text-text-color hover:text-accent-color transition-colors duration-300">
+          <i data-lucide="github" class="w-7 h-7"></i>
+        </a>
+        <a href="https://linkedin.com/in/kasun-akalanka-k-vithanage" target="_blank" class="text-text-color hover:text-accent-color transition-colors duration-300">
+          <i data-lucide="linkedin" class="w-7 h-7"></i>
+        </a>
+        <a href="mailto:k3akalanka@gmail.com" target="_blank" class="text-text-color hover:text-accent-color transition-colors duration-300">
+          <i data-lucide="mail" class="w-7 h-7"></i>
+        </a>
+      </div>
     </section>
 
-    <!-- About -->
-    <section id="about" class="mt-16">
-      <h2 class="text-2xl font-semibold text-[var(--accent-color)] border-b border-[var(--border-color)] pb-2 mb-6">About Me</h2>
-      <p class="leading-relaxed text-[var(--text-color)] text-base md:text-lg">
-        I’m a software engineer focused on building high-impact web applications with clean, maintainable code. I specialize in full-stack JavaScript, TypeScript, and cloud-native technologies.
+    <section id="about" class="mt-16 section-card scroll-mt-header-offset">
+      <h2 class="font-bold text-accent-color border-b-2 border-border-color pb-3 mb-8">About Me</h2>
+      <p class="leading-relaxed text-text-color text-lg">
+        As a dedicated professional with over a decade of experience in quality and environment control within the manufacturing industry, I have developed a strong foundation in ensuring product excellence and regulatory compliance. My career at Noratel International, a renowned Scandinavian transformer manufacturer, honed my skills in quality assurance, data analysis, and corrective action management, where I consistently contributed to maintaining high standards and driving continuous improvement.
+        <br>
+        <br>
+        Currently, I am expanding my technical expertise by pursuing a Bachelor's Degree in Software Engineering at Tampere University of Applied Sciences in Finland. This academic pursuit builds on my background in electrical technology and information technology, equipping me with a comprehensive understanding of both hardware and software domains.
+        <br>
+        <br>
+        With a unique blend of practical industry experience and academic knowledge, I am passionate about leveraging my skills to solve complex problems and contribute to innovative projects. I am always eager to connect with like-minded professionals and explore new opportunities where I can add value and grow.
       </p>
     </section>
 
-    <!-- Skills -->
-    <section id="skills" class="mt-12">
-      <h2 class="text-2xl font-semibold text-[var(--accent-color)] border-b border-[var(--border-color)] pb-2 mb-6">Skills & Tools</h2>
-      <div class="flex flex-wrap gap-3">
-        <span class="bg-[វ0.4em text-sm px-4 py-2 rounded-full bg-[var(--card-bg)] text-[var(--text-color)] hover:bg-[var(--accent-color)] hover:text-[var(--card-bg)] transition">JavaScript</span>
-        <span class="bg-[var(--card-bg)] text-sm px-4 py-2 rounded-full hover:bg-[var(--accent-color)] hover:text-[var(--card-bg)] transition">TypeScript</span>
-        <span class="bg-[var(--card-bg)] text-sm px-4 py-2 rounded-full hover:bg-[var(--accent-color)] hover:text-[var(--card-bg)] transition">React</span>
-        <span class="bg-[var(--card-bg)] text-sm px-4 py-2 rounded-full hover:bg-[var(--accent-color)] hover:text-[var(--card-bg)] transition">Next.js</span>
-        <span class="bg-[var(--card-bg)] text-sm px-4 py-2 rounded-full hover:bg-[var(--accent-color)] hover:text-[var(--card-bg)] transition">Node.js</span>
-        <span class="bg-[var(--card-bg)] text-sm px-4 py-2 rounded-full hover:bg-[var(--accent-color)] hover:text-[var(--card-bg)] transition">Tailwind CSS</span>
-        <span class="bg-[var(--card-bg)] text-sm px-4 py-2 rounded-full hover:bg-[var(--accent-color)] hover:text-[var(--card-bg)] transition">Docker</span>
-        <span class="bg-[var(--card-bg)] text-sm px-4 py-2 rounded-full hover:bg-[var(--accent-color)] hover:text-[var(--card-bg)] transition">AWS</span>
-        <span class="bg-[var(--card-bg)] text-sm px-4 py-2 rounded-full hover:bg-[var(--accent-color)] hover:text-[var(--card-bg)] transition">PostgreSQL</span>
+    <section id="skills" class="mt-16 section-card scroll-mt-header-offset">
+      <h2 class="text-3xl font-bold text-accent-color border-b-2 border-border-color pb-3 mb-8">Skills & Tools</h2>
+      <div class="flex flex-wrap gap-4">
+        <span class="skill-tag">JavaScript</span>
+        <span class="skill-tag">TypeScript</span>
+        <span class="skill-tag">React.js</span>
+        <span class="skill-tag">Next.js</span>
+        <span class="skill-tag">Node.js</span>
+        <span class="skill-tag">Express.js</span>
+        <span class="skill-tag">Tailwind CSS</span>
+        <span class="skill-tag">Docker</span>
+        <span class="skill-tag">AWS</span>
+        <span class="skill-tag">PostgreSQL</span>
+        <span class="skill-tag">MongoDB</span>
+        <span class="skill-tag">Git</span>
       </div>
     </section>
 
-    <!-- Projects -->
-    <section id="projects" class="mt-12">
-      <h2 class="text-2xl font-semibold text-[var(--accent-color)] border-b border-[var(--border-color)] pb-2 mb-6">Projects</h2>
-      <div class="space-y-6">
-        <!-- Project 1 -->
-        <div class="bg-[var(--card-bg)] rounded-xl p-6 shadow-lg hover:shadow-xl transition transform hover:-translate-y-1">
-          <h3 class="text-xl font-bold text-[var(--text-color)]">DevTracker</h3>
-          <p class="text-[var(--text-color)] opacity-80 text-sm mt-2">A developer productivity dashboard with GitHub integration, built using React, Express, and MongoDB.</p>
-          <a href="https://github.com/yourusername/devtracker" target="_blank" class="text-[var(--accent-color)] inline-block mt-3 hover:underline">View on GitHub →</a>
+    <section id="experience" class="mt-16 section-card scroll-mt-header-offset">
+      <h2 class="text-3xl font-bold text-accent-color border-b-2 border-border-color pb-3 mb-8">Work Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3 class="text-xl font-semibold text-text-color">Business Analyst</h3>
+          <p class="text-accent-color text-md">Dine Magik (Pvt) Ltd | May 2023 - Present</p>
+          <ul class="list-disc list-inside text-text-color opacity-90 mt-2 space-y-1">
+            <li>Conducting initial research on Finnish restaurant systems for potential business expansion.</li>
+            <li>Analyzing and studing backend and frontend systems of the restaurant management platform.</li>
+            <li>Participating in meetings and brainstorming sessions on system design and feature planning.</li>
+          </ul>
         </div>
-        <!-- Project 2 -->
-        <div class="bg-[var(--card-bg)] rounded-xl p-6 shadow-lg hover:shadow-xl transition transform hover:-translate-y-1">
-          <h3 class="text-xl font-bold text-[var(--text-color)]">PortFlow</h3>
-          <p class="text-[var(--text-color)] opacity-80 text-sm mt-2">A beautiful portfolio template generator powered by Next.js and Tailwind. Deployed via Vercel.</p>
-          <a href="https://github.com/yourusername/portflow" target="_blank" class="text-[var(--accent-color)] inline-block mt-3 hover:underline">View on GitHub →</a>
+        <div class="timeline-item">
+          <h3 class="text-xl font-semibold text-text-color">Full Stack Web Developer - Intern</h3>
+          <p class="text-accent-color text-md">Tampere University of Applied Sciences | May 2025 - Jun 2025</p>
+          <ul class="list-disc list-inside text-text-color opacity-90 mt-2 space-y-1">
+            <li>Developed a protfolio catelog web site for students and recruiters.</li>
+            <li>Strapi v5 backend (Node.js) with defined content types</li>
+            <li>React + TypeScript frontend using Tailwind CSS and a dark-themed modern UI</li>
+          </ul>
+        </div>
+        <div class="timeline-item">
+          <h3 class="text-xl font-semibold text-text-color">Software Developer - Intern</h3>
+          <p class="text-accent-color text-md">Dine Magik (Pvt) Ltd | Jan 2025 - Apr 2025</p>
+          <ul class="list-disc list-inside text-text-color opacity-90 mt-2 space-y-1">
+            <li>Analyzed and studied backend and frontend systems of the restaurant management platform.</li>
+            <li>Participated in meetings and brainstorming sessions on system design and feature planning.</li>
+            <li>Supported software maintenance, updates, and webpage improvements.</li>
+            <li>Assisted in preparing technical documentation and questionnaires for client insights.</li>
+          </ul>
+        </div>
+        <div class="timeline-item">
+          <h3 class="text-xl font-semibold text-text-color">Quality Assurance and Environment Controller</h3>
+          <p class="text-accent-color text-md">Noratel international (Pvt) Ltd | Oct 2009 - Jul 2022</p>
+          <ul class="list-disc list-inside text-text-color opacity-90 mt-2 space-y-1">
+            <li>Handled Nonconformities and followed up on corrections, and corrective actions.</li>
+            <li>Followed up on high risk errors and preventive actions.</li>
+            <li>Product Analysing and laboratory testing</li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="mt-16 text-center text-[var(--text-color)] opacity-60 text-sm">
-      © 2025 Kasun Akalanka. Built with Tailwind CSS & Vite.
+    <section id="education" class="mt-16 section-card scroll-mt-header-offset">
+      <h2 class="text-3xl font-bold text-accent-color border-b-2 border-border-color pb-3 mb-8">Education</h2>
+      <div class="timeline">
+        
+        <div class="timeline-item">
+          <h3 class="text-xl font-semibold text-text-color">Bachelor in Software Engineering</h3>
+          <p class="text-accent-color text-md">Tampere University of Applied Sciences | Aug 2022 - Present</p>
+          <p class="text-text-color opacity-90 mt-1">Specialization in Software Development, Web Development amd Embedded Systems.</p>
+        </div>
+        <div class="timeline-item">
+          <h3 class="text-xl font-semibold text-text-color">Advanced National Diploma in Information Technology</h3>
+          <p class="text-accent-color text-md">London Management Qualifications - Level 5 | Jan 2019 - Jan 2020</p>
+          <p class="text-text-color opacity-90 mt-1">Intensive program covering Programming, Database Management, and Software Engineering fundamentals in a practical setting.</p>
+        </div>        
+        <div class="timeline-item">
+          <h3 class="text-xl font-semibold text-text-color">National Diploma in Electrical Technology (NVQ Level 5), Electrical engineering</h3>
+          <p class="text-accent-color text-md">Department of Technical Education & Training (DTET) | Feb 2014 - Apr 2017</p>
+          <p class="text-text-color opacity-90 mt-1">Covered topics such as Electronics, Circuits, Power Electronics, Telecommunication systems, and more.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="mt-16 section-card scroll-mt-header-offset">
+      <h2 class="text-3xl font-bold text-accent-color border-b-2 border-border-color pb-3 mb-8">Projects</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="project-card">
+          <h3 class="text-xl font-bold text-text-color mb-2">DevTracker</h3>
+          <p class="text-text-color opacity-80 text-sm mb-4">A developer productivity dashboard with GitHub integration, built using React, Express, and MongoDB. Features real-time data visualization and personalized insights.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="text-accent-color text-xs font-semibold bg-card-bg px-3 py-1 rounded-full">React</span>
+            <span class="text-accent-color text-xs font-semibold bg-card-bg px-3 py-1 rounded-full">Node.js</span>
+            <span class="text-accent-color text-xs font-semibold bg-card-bg px-3 py-1 rounded-full">MongoDB</span>
+            <span class="text-accent-color text-xs font-semibold bg-card-bg px-3 py-1 rounded-full">Express</span>
+          </div>
+          <a href="https://github.com/yourusername/devtracker" target="_blank" class="text-accent-color inline-flex items-center gap-1 font-medium hover:underline hover:gap-2 transition-all duration-300">
+            View on GitHub <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+        <div class="project-card">
+          <h3 class="text-xl font-bold text-text-color mb-2">PortFlow</h3>
+          <p class="text-text-color opacity-80 text-sm mb-4">A customizable portfolio template generator powered by Next.js and Tailwind CSS. Designed for quick deployment and modern aesthetics.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="text-accent-color text-xs font-semibold bg-card-bg px-3 py-1 rounded-full">Next.js</span>
+            <span class="text-accent-color text-xs font-semibold bg-card-bg px-3 py-1 rounded-full">Tailwind CSS</span>
+            <span class="text-accent-color text-xs font-semibold bg-card-bg px-3 py-1 rounded-full">Vercel</span>
+          </div>
+          <a href="https://github.com/yourusername/portflow" target="_blank" class="text-accent-color inline-flex items-center gap-1 font-medium hover:underline hover:gap-2 transition-all duration-300">
+            View on GitHub <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+        <div class="project-card">
+          <h3 class="text-xl font-bold text-text-color mb-2">DevTracker</h3>
+          <p class="text-text-color opacity-80 text-sm mb-4">A developer productivity dashboard with GitHub integration, built using React, Express, and MongoDB. Features real-time data visualization and personalized insights.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="text-accent-color text-xs font-semibold bg-card-bg px-3 py-1 rounded-full">React</span>
+            <span class="text-accent-color text-xs font-semibold bg-card-bg px-3 py-1 rounded-full">Node.js</span>
+            <span class="text-accent-color text-xs font-semibold bg-card-bg px-3 py-1 rounded-full">MongoDB</span>
+            <span class="text-accent-color text-xs font-semibold bg-card-bg px-3 py-1 rounded-full">Express</span>
+          </div>
+          <a href="https://github.com/yourusername/devtracker" target="_blank" class="text-accent-color inline-flex items-center gap-1 font-medium hover:underline hover:gap-2 transition-all duration-300">
+            View on GitHub <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="mt-20 text-center text-text-color opacity-70 text-sm py-6 border-t border-border-color">
+      © 2025 Kasun Akalanka. Crafted with ❤️ and modern web technologies.
     </footer>
   </main>
 
-  <script src="https://unpkg.com/lucide@latest"></script>
   <script>
+    // Initialize Lucide icons on page load
     lucide.createIcons();
 
     // Hamburger Menu Toggle
@@ -182,31 +245,62 @@
     const mobileThemeToggle = document.querySelector('#mobile-theme-toggle');
     const html = document.documentElement;
 
-    function toggleTheme() {
-      const currentTheme = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      html.setAttribute('data-theme', currentTheme);
-      const icon = currentTheme === 'dark' ? 'moon' : 'sun';
-      themeToggle.querySelector('i').setAttribute('data-lucide', icon);
-      mobileThemeToggle.querySelector('i').setAttribute('data-lucide', icon);
-      lucide.createIcons();
+    function applyTheme(theme) {
+      console.log(`Applying theme: ${theme}`);
+      html.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+      console.log(`Stored theme in localStorage: ${localStorage.getItem('theme')}`);
     }
 
-    themeToggle.addEventListener('click', toggleTheme);
-    mobileThemeToggle.addEventListener('click', toggleTheme);
+    function toggleTheme() {
+      console.log('Toggling theme');
+      const currentTheme = html.getAttribute('data-theme') || 'light';
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      applyTheme(newTheme);
+    }
+
+    // Initialize theme on page load
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      console.log(`Found saved theme: ${savedTheme}`);
+      applyTheme(savedTheme);
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      console.log('System prefers dark theme');
+      applyTheme('dark');
+    } else {
+      console.log('Defaulting to light theme');
+      applyTheme('light');
+    }
+
+    // Attach event listeners
+    if (themeToggle) {
+      themeToggle.addEventListener('click', () => {
+        console.log('Desktop theme toggle clicked');
+        toggleTheme();
+      });
+    }
+    if (mobileThemeToggle) {
+      mobileThemeToggle.addEventListener('click', () => {
+        console.log('Mobile theme toggle clicked');
+        toggleTheme();
+      });
+    }
+
+    // Close mobile menu when a nav link is clicked
+    document.querySelectorAll('#mobile-menu .nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        mobileMenu.classList.add('hidden');
+      });
+    });
 
     // Smooth Scroll for Nav Links
-    document.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', (e) => {
-        if (link.getAttribute('href').startsWith('#')) {
-          e.preventDefault();
-          const targetId = link.getAttribute('href').substring(1);
-          const targetElement = document.getElementById(targetId);
-          targetElement.scrollIntoView({ behavior: 'smooth' });
-          // Close mobile menu after clicking
-          hamburger.classList.remove('active');
-          mobileMenu.classList.add('hidden');
-        }
-      });
+    document.querySelectorAll('a.nav-link').forEach(link => {
+      if (link.getAttribute('href') && link.getAttribute('href').startsWith('#')) {
+        link.addEventListener('click', (e) => {
+          // Rely on scroll-smooth and scroll-mt-header-offset
+        });
+      }
     });
   </script>
 </body>
