@@ -1,249 +1,324 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth" data-theme="dark">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kasun Akalanka - Software Engineer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <script type="module" crossorigin src="/assets/index-9vtowq1b.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-Bev0D8UC.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kasun Akalanka - Software Engineer</title>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="font-sans min-h-screen antialiased bg-bg-color text-text-color">
 
-    <header class="fixed top-0 left-0 w-full z-50 bg-bg-color shadow-lg" style="height: var(--header-height);">
-        <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between h-full">
-            <div class="flex items-center space-x-3">
-                <img
-                    src="https://media.licdn.com/dms/image/v2/D5603AQGUW5mGRlFrKg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1687421272007?e=1755734400&v=beta&t=K2qkTVqnDV0Dmok3fE7akRPw2YPNbnn2rI0gzd79iDs"
-                    alt="Profile Picture"
-                    class="w-10 h-10 rounded-full border-2 border-accent-color transform hover:scale-110 transition-transform duration-300"
-                />
-                <a href="#" class="font-bold text-text-color hover:text-accent-color transition-colors duration-300">
-                    Kasun Akalanka
-                </a>
-            </div>
+  <header class="fixed top-0 left-0 w-full z-50 bg-bg-color shadow-lg" style="height: var(--header-height);">
+    <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between h-full">
+      <div class="flex items-center space-x-3">
+        <img
+          src="https://media.licdn.com/dms/image/v2/D5603AQGUW5mGRlFrKg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1687421272007?e=1755734400&v=beta&t=K2qkTVqnDV0Dmok3fE7akRPw2YPNbnn2rI0gzd79iDs"
+          alt="Profile Picture"
+          class="w-10 h-10 rounded-full border-2 border-accent-color transform hover:scale-110 transition-transform duration-300"
+        />
+        <a href="#" class="font-bold text-text-color hover:text-accent-color transition-colors duration-300">
+          Kasun Akalanka
+        </a>
+      </div>
 
-            <div class="hidden md:flex items-center space-x-6">
-                <a href="#about" class="nav-link">About</a>
-                <a href="#skills" class="nav-link">Skills</a>
-                <a href="#experience" class="nav-link">Experience</a>
-                <a href="#education" class="nav-link">Education</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="https://github.com/sightser" class="nav-link flex items-center gap-1"><i data-lucide="github" class="w-4 h-4"></i> GitHub</a>
-                <a href="https://linkedin.com/in/kasun-akalanka-k-vithanage" class="nav-link flex items-center gap-1"><i data-lucide="linkedin" class="w-4 h-4"></i> LinkedIn</a>
-                <a href="mailto:k3akalanka@gmail.com" class="nav-link flex items-center gap-1"><i data-lucide="mail" class="w-4 h-4"></i> Email</a>
-                <button id="theme-toggle" class="p-2 rounded-full bg-card-bg hover:bg-accent-color hover:text-white transition-colors duration-300">
-                    <i data-lucide="sun" class="theme-icon dark-icon"></i>
-                    <i data-lucide="moon" class="theme-icon light-icon hidden"></i>
-                </button>
-            </div>
+      <div class="hidden md:flex items-center space-x-6">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="https://github.com/sightser" class="nav-link flex items-center gap-1"><i data-lucide="github" class="w-4 h-4"></i> GitHub</a>
+        <a href="https://linkedin.com/in/kasun-akalanka-k-vithanage" class="nav-link flex items-center gap-1"><i data-lucide="linkedin" class="w-4 h-4"></i> LinkedIn</a>
+        <a href="mailto:k3akalanka@gmail.com" class="nav-link flex items-center gap-1"><i data-lucide="mail" class="w-4 h-4"></i> Email</a>
+        <button id="theme-toggle" class="p-2 rounded-full bg-card-bg hover:bg-accent-color hover:text-white transition-colors duration-300">
+          <i data-lucide="sun" class="theme-icon dark-icon"></i>
+          <i data-lucide="moon" class="theme-icon light-icon hidden"></i>
+        </button>
+      </div>
 
-            <div class="md:hidden flex items-center space-x-4">
-                <button id="mobile-theme-toggle" class="p-2 rounded-full bg-card-bg hover:bg-accent-color hover:text-white transition-colors duration-300">
-                    <i data-lucide="sun" class="theme-icon dark-icon"></i>
-                    <i data-lucide="moon" class="theme-icon light-icon hidden"></i>
-                </button>
-                <button class="hamburger flex flex-col justify-center items-center space-y-1.5 w-8 h-8">
-                    <div class="bar1 w-8 h-0.5 bg-text-color rounded"></div>
-                    <div class="bar2 w-8 h-0.5 bg-text-color rounded"></div>
-                    <div class="bar3 w-8 h-0.5 bg-text-color rounded"></div>
-                </button>
-            </div>
-        </nav>
+      <div class="md:hidden flex items-center space-x-4">
+        <button id="mobile-theme-toggle" class="p-2 rounded-full bg-card-bg hover:bg-accent-color hover:text-white transition-colors duration-300">
+          <i data-lucide="sun" class="theme-icon dark-icon"></i>
+          <i data-lucide="moon" class="theme-icon light-icon hidden"></i>
+        </button>
+        <button class="hamburger flex flex-col justify-center items-center space-y-1.5 w-8 h-8">
+          <div class="bar1 w-8 h-0.5 bg-text-color rounded"></div>
+          <div class="bar2 w-8 h-0.5 bg-text-color rounded"></div>
+          <div class="bar3 w-8 h-0.5 bg-text-color rounded"></div>
+        </button>
+      </div>
+    </nav>
 
-        <div id="mobile-menu" class="hidden md:hidden bg-card-bg shadow-lg py-4">
-            <div class="flex flex-col items-center space-y-4">
-                <a href="#about" class="nav-link text-lg py-2">About</a>
-                <a href="#skills" class="nav-link text-lg py-2">Skills</a>
-                <a href="#experience" class="nav-link text-lg py-2">Experience</a>
-                <a href="#education" class="nav-link text-lg py-2">Education</a>
-                <a href="#projects" class="nav-link text-lg py-2">Projects</a>
-                <a href="https://github.com/sightser" class="nav-link flex items-center gap-2 text-lg py-2"><i data-lucide="github" class="w-5 h-5"></i> GitHub</a>
-                <a href="https://linkedin.com/in/kasun-akalanka-k-vithanage" class="nav-link flex items-center gap-2 text-lg py-2"><i data-lucide="linkedin" class="w-5 h-5"></i> LinkedIn</a>
-                <a href="mailto:k3akalanka@gmail.com" class="nav-link flex items-center gap-2 text-lg py-2"><i data-lucide="mail" class="w-5 h-5"></i> Email</a>
-            </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-card-bg shadow-lg py-4">
+      <div class="flex flex-col items-center space-y-4">
+        <a href="#about" class="nav-link text-lg py-2">About</a>
+        <a href="#skills" class="nav-link text-lg py-2">Skills</a>
+        <a href="#experience" class="nav-link text-lg py-2">Experience</a>
+        <a href="#education" class="nav-link text-lg py-2">Education</a>
+        <a href="#projects" class="nav-link text-lg py-2">Projects</a>
+        <a href="https://github.com/sightser" class="nav-link flex items-center gap-2 text-lg py-2"><i data-lucide="github" class="w-5 h-5"></i> GitHub</a>
+        <a href="https://linkedin.com/in/kasun-akalanka-k-vithanage" class="nav-link flex items-center gap-2 text-lg py-2"><i data-lucide="linkedin" class="w-5 h-5"></i> LinkedIn</a>
+        <a href="mailto:k3akalanka@gmail.com" class="nav-link flex items-center gap-2 text-lg py-2"><i data-lucide="mail" class="w-5 h-5"></i> Email</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-6 py-12 main-content-padding">
+    <section class="text-center py-16 flex flex-col items-center">
+      <img src="https://media.licdn.com/dms/image/v2/D5603AQGUW5mGRlFrKg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1687421272007?e=1755734400&v=beta&t=K2qkTVqnDV0Dmok3fE7akRPw2YPNbnn2rI0gzd79iDs" alt="Profile Picture" class="w-40 h-40 mx-auto rounded-full border-4 border-accent-color shadow-xl transform hover:scale-105 transition-transform duration-300 ease-in-out" />
+      <h1 class="text-5xl md:text-6xl font-bold mt-8 text-text-color tracking-tight">Kasun Akalanka</h1>
+      <p class="text-accent-color text-xl md:text-xl mt-3 font-semibold">Software Engineer · Full Stack Developer</p>
+      <div class="flex space-x-4 mt-6">
+        <a href="https://github.com/sightser" target="_blank" class="text-text-color hover:text-accent-color transition-colors duration-300">
+          <i data-lucide="github" class="w-7 h-7"></i>
+        </a>
+        <a href="https://linkedin.com/in/kasun-akalanka-k-vithanage" target="_blank" class="text-text-color hover:text-accent-color transition-colors duration-300">
+          <i data-lucide="linkedin" class="w-7 h-7"></i>
+        </a>
+        <a href="mailto:k3akalanka@gmail.com" target="_blank" class="text-text-color hover:text-accent-color transition-colors duration-300">
+          <i data-lucide="mail" class="w-7 h-7"></i>
+        </a>
+      </div>
+    </section>
+
+    <section id="about" class="mt-16 section-card scroll-mt-header-offset">
+      <h2 class="font-bold text-accent-color border-b-2 border-border-color pb-3 mb-8">About Me</h2>
+      <p class="leading-relaxed text-text-color text-lg">
+        As a dedicated professional with over a decade of experience in quality and environment control within the manufacturing industry, I have developed a strong foundation in ensuring product excellence and regulatory compliance. My career at Noratel International, a renowned Scandinavian transformer manufacturer, honed my skills in quality assurance, data analysis, and corrective action management, where I consistently contributed to maintaining high standards and driving continuous improvement.
+        <br>
+        <br>
+        Currently, I am expanding my technical expertise by pursuing a Bachelor's Degree in Software Engineering at Tampere University of Applied Sciences in Finland. This academic pursuit builds on my background in electrical technology and information technology, equipping me with a comprehensive understanding of both hardware and software domains.
+        <br>
+        <br>
+        With a unique blend of practical industry experience and academic knowledge, I am passionate about leveraging my skills to solve complex problems and contribute to innovative projects. I am always eager to connect with like-minded professionals and explore new opportunities where I can add value and grow.
+      </p>
+    </section>
+
+    <section id="skills" class="mt-16 section-card scroll-mt-header-offset">
+      <h2 class="text-3xl font-bold text-accent-color border-b-2 border-border-color pb-3 mb-8">Skills & Tools</h2>
+      <div class="flex flex-wrap gap-4">
+        <span class="skill-tag">JavaScript</span>
+        <span class="skill-tag">TypeScript</span>
+        <span class="skill-tag">React.js</span>
+        <span class="skill-tag">Next.js</span>
+        <span class="skill-tag">Node.js</span>
+        <span class="skill-tag">Express.js</span>
+        <span class="skill-tag">Tailwind CSS</span>
+        <span class="skill-tag">Docker</span>
+        <span class="skill-tag">AWS</span>
+        <span class="skill-tag">PostgreSQL</span>
+        <span class="skill-tag">MongoDB</span>
+        <span class="skill-tag">Git</span>
+      </div>
+    </section>
+
+    <section id="experience" class="mt-16 section-card scroll-mt-header-offset">
+      <h2 class="text-3xl font-bold text-accent-color border-b-2 border-border-color pb-3 mb-8">Work Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3 class="text-xl font-semibold text-text-color">Business Analyst</h3>
+          <p class="text-accent-color text-md">Dine Magik (Pvt) Ltd | May 2023 - Present</p>
+          <ul class="list-disc list-inside text-text-color opacity-90 mt-2 space-y-1">
+            <li>Conducting initial research on Finnish restaurant systems for potential business expansion.</li>
+            <li>Analyzing and studing backend and frontend systems of the restaurant management platform.</li>
+            <li>Participating in meetings and brainstorming sessions on system design and feature planning.</li>
+          </ul>
         </div>
-    </header>
+        <div class="timeline-item">
+          <h3 class="text-xl font-semibold text-text-color">Full Stack Web Developer - Intern</h3>
+          <p class="text-accent-color text-md">Tampere University of Applied Sciences | May 2025 - Jun 2025</p>
+          <ul class="list-disc list-inside text-text-color opacity-90 mt-2 space-y-1">
+            <li>Developed a protfolio catelog web site for students and recruiters.</li>
+            <li>Strapi v5 backend (Node.js) with defined content types</li>
+            <li>React + TypeScript frontend using Tailwind CSS and a dark-themed modern UI</li>
+          </ul>
+        </div>
+        <div class="timeline-item">
+          <h3 class="text-xl font-semibold text-text-color">Software Developer - Intern</h3>
+          <p class="text-accent-color text-md">Dine Magik (Pvt) Ltd | Jan 2025 - Apr 2025</p>
+          <ul class="list-disc list-inside text-text-color opacity-90 mt-2 space-y-1">
+            <li>Analyzed and studied backend and frontend systems of the restaurant management platform.</li>
+            <li>Participated in meetings and brainstorming sessions on system design and feature planning.</li>
+            <li>Supported software maintenance, updates, and webpage improvements.</li>
+            <li>Assisted in preparing technical documentation and questionnaires for client insights.</li>
+          </ul>
+        </div>
+        <div class="timeline-item">
+          <h3 class="text-xl font-semibold text-text-color">Quality Assurance and Environment Controller</h3>
+          <p class="text-accent-color text-md">Noratel international (Pvt) Ltd | Oct 2009 - Jul 2022</p>
+          <ul class="list-disc list-inside text-text-color opacity-90 mt-2 space-y-1">
+            <li>Handled Nonconformities and followed up on corrections, and corrective actions.</li>
+            <li>Followed up on high risk errors and preventive actions.</li>
+            <li>Product Analysing and laboratory testing</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-    <main class="max-w-6xl mx-auto px-6 py-12 main-content-padding">
-        <section class="text-center py-16 flex flex-col items-center">
-            <img src="https://media.licdn.com/dms/image/v2/D5603AQGUW5mGRlFrKg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1687421272007?e=1755734400&v=beta&t=K2qkTVqnDV0Dmok3fE7akRPw2YPNbnn2rI0gzd79iDs" alt="Profile Picture" class="w-40 h-40 mx-auto rounded-full border-4 border-accent-color shadow-xl transform hover:scale-105 transition-transform duration-300 ease-in-out" />
-            <h1 class="text-5xl md:text-6xl font-bold mt-8 text-text-color tracking-tight">Kasun Akalanka</h1>
-            <p class="text-accent-color text-xl md:text-xl mt-3 font-semibold">Software Engineer · Full Stack Developer</p>
-            <div class="flex space-x-4 mt-6">
-                <a href="https://github.com/sightser" target="_blank" class="text-text-color hover:text-accent-color transition-colors duration-300">
-                    <i data-lucide="github" class="w-7 h-7"></i>
-                </a>
-                <a href="https://linkedin.com/in/kasun-akalanka-k-vithanage" target="_blank" class="text-text-color hover:text-accent-color transition-colors duration-300">
-                    <i data-lucide="linkedin" class="w-7 h-7"></i>
-                </a>
-                <a href="mailto:k3akalanka@gmail.com" target="_blank" class="text-text-color hover:text-accent-color transition-colors duration-300">
-                    <i data-lucide="mail" class="w-7 h-7"></i>
-                </a>
-            </div>
-        </section>
+    <section id="education" class="mt-16 section-card scroll-mt-header-offset">
+      <h2 class="text-3xl font-bold text-accent-color border-b-2 border-border-color pb-3 mb-8">Education</h2>
+      <div class="timeline">
+        
+        <div class="timeline-item">
+          <h3 class="text-xl font-semibold text-text-color">Bachelor in Software Engineering</h3>
+          <p class="text-accent-color text-md">Tampere University of Applied Sciences | Aug 2022 - Present</p>
+          <p class="text-text-color opacity-90 mt-1">Specialization in Software Development, Web Development amd Embedded Systems.</p>
+        </div>
+        <div class="timeline-item">
+          <h3 class="text-xl font-semibold text-text-color">Advanced National Diploma in Information Technology</h3>
+          <p class="text-accent-color text-md">London Management Qualifications - Level 5 | Jan 2019 - Jan 2020</p>
+          <p class="text-text-color opacity-90 mt-1">Intensive program covering Programming, Database Management, and Software Engineering fundamentals in a practical setting.</p>
+        </div>        
+        <div class="timeline-item">
+          <h3 class="text-xl font-semibold text-text-color">National Diploma in Electrical Technology (NVQ Level 5), Electrical engineering</h3>
+          <p class="text-accent-color text-md">Department of Technical Education & Training (DTET) | Feb 2014 - Apr 2017</p>
+          <p class="text-text-color opacity-90 mt-1">Covered topics such as Electronics, Circuits, Power Electronics, Telecommunication systems, and more.</p>
+        </div>
+      </div>
+    </section>
 
-        <section id="about" class="mt-16 section-card scroll-mt-header-offset">
-            <h2 class="font-bold text-accent-color border-b-2 border-border-color pb-3 mb-8">About Me</h2>
-            <p class="leading-relaxed text-text-color text-lg">
-                As a dedicated professional with over a decade of experience in quality and environment control within the manufacturing industry, I have developed a strong foundation in ensuring product excellence and regulatory compliance. My career at Noratel International, a renowned Scandinavian transformer manufacturer, honed my skills in quality assurance, data analysis, and corrective action management, where I consistently contributed to maintaining high standards and driving continuous improvement.
-                <br>
-                <br>
-                Currently, I am expanding my technical expertise by pursuing a Bachelor's Degree in Software Engineering at Tampere University of Applied Sciences in Finland. This academic pursuit builds on my background in electrical technology and information technology, equipping me with a comprehensive understanding of both hardware and software domains.
-                <br>
-                <br>
-                With a unique blend of practical industry experience and academic knowledge, I am passionate about leveraging my skills to solve complex problems and contribute to innovative projects. I am always eager to connect with like-minded professionals and explore new opportunities where I can add value and grow.
-            </p>
-        </section>
+    <section id="projects" class="mt-16 section-card scroll-mt-header-offset">
+      <h2 class="text-3xl font-bold text-accent-color border-b-2 border-border-color pb-3 mb-8">Projects</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="project-card">
+          <h3 class="text-xl font-bold text-text-color mb-2">Portfolio-Catalogue</h3>
+          <p class="text-text-color opacity-80 text-sm mb-4">A React + TypeScript based portfolio website with Strapi v5 backend (Node.js) that manages student and recruiter profiles. Users can create and manage their own profiles, upload their work, and connect with employers. </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="text-accent-color text-xs font-semibold bg-card-bg px-3 py-1 rounded-full">⚛️React</span>
+            <span class="text-accent-color text-xs font-semibold bg-card-bg px-3 py-1 rounded-full">🌿Node.js</span>
+            <span class="text-accent-color text-xs font-semibold bg-card-bg px-3 py-1 rounded-full">🎨Tailwind CSS</span>
+          </div>
+          <a href="https://github.com/SightseR/Portfolio-Catalogue" target="_blank" class="text-accent-color inline-flex items-center gap-1 font-medium hover:underline hover:gap-2 transition-all duration-300">
+            View on GitHub <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+        <div class="project-card">
+          <h3 class="text-xl font-bold text-text-color mb-2">My Portfolio Website</h3>
+          <p class="text-text-color opacity-80 text-sm mb-4">A customizable portfolio website powered by Next.js and Tailwind CSS. Designed for my own profile.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="text-accent-color text-xs font-semibold bg-card-bg px-3 py-1 rounded-full">⏭️Next.js</span>
+            <span class="text-accent-color text-xs font-semibold bg-card-bg px-3 py-1 rounded-full">🎨Tailwind CSS</span>
+            <span class="text-accent-color text-xs font-semibold bg-card-bg px-3 py-1 rounded-full">🖥️GitHub</span>
+          </div>
+          <a href="https://github.com/SightseR/SightseR.github.io" target="_blank" class="text-accent-color inline-flex items-center gap-1 font-medium hover:underline hover:gap-2 transition-all duration-300">
+            View on GitHub <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+        <div class="project-card">
+          <h3 class="text-xl font-bold text-text-color mb-2">Shoe Management Web App</h3>
+          <p class="text-text-color opacity-80 text-sm mb-4">A modern web app to manage and track shoe records with filtering, sorting, image support, and 
+            real-time database using Firebase Firestore.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="text-accent-color text-xs font-semibold bg-card-bg px-3 py-1 rounded-full">⚛️React</span>
+            <span class="text-accent-color text-xs font-semibold bg-card-bg px-3 py-1 rounded-full">🔥Firebase Firestore</span>
+            <span class="text-accent-color text-xs font-semibold bg-card-bg px-3 py-1 rounded-full">🎨Tailwind CSS</span>
+            <span class="text-accent-color text-xs font-semibold bg-card-bg px-3 py-1 rounded-full">⚡Vite</span>
+          </div>
+          <a href="https://github.com/SightseR/shoe-management-app" target="_blank" class="text-accent-color inline-flex items-center gap-1 font-medium hover:underline hover:gap-2 transition-all duration-300">
+            View on GitHub <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+        <div class="project-card">
+          <h3 class="text-xl font-bold text-text-color mb-2">Vehicle Service App</h3>
+          <p class="text-text-color opacity-80 text-sm mb-4">The Vehicle Service App is a web application built with React and Firebase to manage vehicle service records. 
+            Users can register vehicle inspections, view and manage records, print service details as A4-sized PDFs, and download all records as a CSV file. 
+            It's ideal for automotive service centers or individual vehicle owners looking to keep track of service history.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="text-accent-color text-xs font-semibold bg-card-bg px-3 py-1 rounded-full">⚛️React</span>
+            <span class="text-accent-color text-xs font-semibold bg-card-bg px-3 py-1 rounded-full">🔥Firebase Firestore</span>
+            <span class="text-accent-color text-xs font-semibold bg-card-bg px-3 py-1 rounded-full">🎨Tailwind CSS</span>
+            <span class="text-accent-color text-xs font-semibold bg-card-bg px-3 py-1 rounded-full">⚡Vite</span>
+          </div>
+          <a href="https://github.com/SightseR/vehicle-service-app" target="_blank" class="text-accent-color inline-flex items-center gap-1 font-medium hover:underline hover:gap-2 transition-all duration-300">
+            View on GitHub <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+    </section>
 
-        <section id="skills" class="mt-16 section-card scroll-mt-header-offset">
-            <h2 class="text-3xl font-bold text-accent-color border-b-2 border-border-color pb-3 mb-8">Skills & Tools</h2>
-            <div class="flex flex-wrap gap-4">
-                <span class="skill-tag">JavaScript</span>
-                <span class="skill-tag">TypeScript</span>
-                <span class="skill-tag">React.js</span>
-                <span class="skill-tag">Next.js</span>
-                <span class="skill-tag">Node.js</span>
-                <span class="skill-tag">Express.js</span>
-                <span class="skill-tag">Tailwind CSS</span>
-                <span class="skill-tag">Docker</span>
-                <span class="skill-tag">AWS</span>
-                <span class="skill-tag">PostgreSQL</span>
-                <span class="skill-tag">MongoDB</span>
-                <span class="skill-tag">Git</span>
-            </div>
-        </section>
+    <footer class="mt-20 text-center text-text-color opacity-70 text-sm py-6 border-t border-border-color">
+      © 2025  <a href="k3akalanka@gmail.com" target="_blank" class="text-accent-color inline-flex items-center gap-1 font-medium hover:underline hover:gap-2 transition-all duration-300">
+            Kasun Akalanka
+          </a>. Crafted with modern web technologies.
+    </footer>
+  </main>
 
-        <section id="experience" class="mt-16 section-card scroll-mt-header-offset">
-            <h2 class="text-3xl font-bold text-accent-color border-b-2 border-border-color pb-3 mb-8">Work Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <h3 class="text-xl font-semibold text-text-color">Business Analyst</h3>
-                    <p class="text-accent-color text-md">Dine Magik (Pvt) Ltd | May 2023 - Present</p>
-                    <ul class="list-disc list-inside text-text-color opacity-90 mt-2 space-y-1">
-                        <li>Conducting initial research on Finnish restaurant systems for potential business expansion.</li>
-                        <li>Analyzing and studing backend and frontend systems of the restaurant management platform.</li>
-                        <li>Participating in meetings and brainstorming sessions on system design and feature planning.</li>
-                    </ul>
-                </div>
-                <div class="timeline-item">
-                    <h3 class="text-xl font-semibold text-text-color">Full Stack Web Developer - Intern</h3>
-                    <p class="text-accent-color text-md">Tampere University of Applied Sciences | May 2025 - Jun 2025</p>
-                    <ul class="list-disc list-inside text-text-color opacity-90 mt-2 space-y-1">
-                        <li>Developed a protfolio catelog web site for students and recruiters.</li>
-                        <li>Strapi v5 backend (Node.js) with defined content types</li>
-                        <li>React + TypeScript frontend using Tailwind CSS and a dark-themed modern UI</li>
-                    </ul>
-                </div>
-                <div class="timeline-item">
-                    <h3 class="text-xl font-semibold text-text-color">Software Developer - Intern</h3>
-                    <p class="text-accent-color text-md">Dine Magik (Pvt) Ltd | Jan 2025 - Apr 2025</p>
-                    <ul class="list-disc list-inside text-text-color opacity-90 mt-2 space-y-1">
-                        <li>Analyzed and studied backend and frontend systems of the restaurant management platform.</li>
-                        <li>Participated in meetings and brainstorming sessions on system design and feature planning.</li>
-                        <li>Supported software maintenance, updates, and webpage improvements.</li>
-                        <li>Assisted in preparing technical documentation and questionnaires for client insights.</li>
-                    </ul>
-                </div>
-                <div class="timeline-item">
-                    <h3 class="text-xl font-semibold text-text-color">Quality Assurance and Environment Controller</h3>
-                    <p class="text-accent-color text-md">Noratel international (Pvt) Ltd | Oct 2009 - Jul 2022</p>
-                    <ul class="list-disc list-inside text-text-color opacity-90 mt-2 space-y-1">
-                        <li>Handled Nonconformities and followed up on corrections, and corrective actions.</li>
-                        <li>Followed up on high risk errors and preventive actions.</li>
-                        <li>Product Analysing and laboratory testing</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+  <script>
+    // Initialize Lucide icons on page load
+    lucide.createIcons();
 
-        <section id="education" class="mt-16 section-card scroll-mt-header-offset">
-            <h2 class="text-3xl font-bold text-accent-color border-b-2 border-border-color pb-3 mb-8">Education</h2>
-            <div class="timeline">
-                
-                <div class="timeline-item">
-                    <h3 class="text-xl font-semibold text-text-color">Bachelor in Software Engineering</h3>
-                    <p class="text-accent-color text-md">Tampere University of Applied Sciences | Aug 2022 - Present</p>
-                    <p class="text-text-color opacity-90 mt-1">Specialization in Software Development, Web Development amd Embedded Systems.</p>
-                </div>
-                <div class="timeline-item">
-                    <h3 class="text-xl font-semibold text-text-color">Advanced National Diploma in Information Technology</h3>
-                    <p class="text-accent-color text-md">London Management Qualifications - Level 5 | Jan 2019 - Jan 2020</p>
-                    <p class="text-text-color opacity-90 mt-1">Intensive program covering Programming, Database Management, and Software Engineering fundamentals in a practical setting.</p>
-                </div>        
-                <div class="timeline-item">
-                    <h3 class="text-xl font-semibold text-text-color">National Diploma in Electrical Technology (NVQ Level 5), Electrical engineering</h3>
-                    <p class="text-accent-color text-md">Department of Technical Education & Training (DTET) | Feb 2014 - Apr 2017</p>
-                    <p class="text-text-color opacity-90 mt-1">Covered topics such as Electronics, Circuits, Power Electronics, Telecommunication systems, and more.</p>
-                </div>
-            </div>
-        </section>
+    // Hamburger Menu Toggle
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('#mobile-menu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      mobileMenu.classList.toggle('hidden');
+    });
 
-        <section id="projects" class="mt-16 section-card scroll-mt-header-offset">
-            <h2 class="text-3xl font-bold text-accent-color border-b-2 border-border-color pb-3 mb-8">Projects</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="project-card">
-                    <h3 class="text-xl font-bold text-text-color mb-2">Portfolio-Catalogue</h3>
-                    <p class="text-text-color opacity-80 text-sm mb-4">A React + TypeScript based portfolio website with Strapi v5 backend (Node.js) that manages student and recruiter profiles. Users can create and manage their own profiles, upload their work, and connect with employers. </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="text-accent-color text-xs font-semibold bg-card-bg px-3 py-1 rounded-full">⚛️React</span>
-                        <span class="text-accent-color text-xs font-semibold bg-card-bg px-3 py-1 rounded-full">🌿Node.js</span>
-                        <span class="text-accent-color text-xs font-semibold bg-card-bg px-3 py-1 rounded-full">🎨Tailwind CSS</span>
-                    </div>
-                    <a href="https://github.com/SightseR/Portfolio-Catalogue" target="_blank" class="text-accent-color inline-flex items-center gap-1 font-medium hover:underline hover:gap-2 transition-all duration-300">
-                        View on GitHub <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                    </a>
-                </div>
-                <div class="project-card">
-                    <h3 class="text-xl font-bold text-text-color mb-2">My Portfolio Website</h3>
-                    <p class="text-text-color opacity-80 text-sm mb-4">A customizable portfolio website powered by Next.js and Tailwind CSS. Designed for my own profile.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="text-accent-color text-xs font-semibold bg-card-bg px-3 py-1 rounded-full">⏭️Next.js</span>
-                        <span class="text-accent-color text-xs font-semibold bg-card-bg px-3 py-1 rounded-full">🎨Tailwind CSS</span>
-                        <span class="text-accent-color text-xs font-semibold bg-card-bg px-3 py-1 rounded-full">🖥️GitHub</span>
-                    </div>
-                    <a href="https://github.com/SightseR/SightseR.github.io" target="_blank" class="text-accent-color inline-flex items-center gap-1 font-medium hover:underline hover:gap-2 transition-all duration-300">
-                        View on GitHub <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                    </a>
-                </div>
-                <div class="project-card">
-                    <h3 class="text-xl font-bold text-text-color mb-2">Shoe Management Web App</h3>
-                    <p class="text-text-color opacity-80 text-sm mb-4">A modern web app to manage and track shoe records with filtering, sorting, image support, and 
-                        real-time database using Firebase Firestore.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="text-accent-color text-xs font-semibold bg-card-bg px-3 py-1 rounded-full">⚛️React</span>
-                        <span class="text-accent-color text-xs font-semibold bg-card-bg px-3 py-1 rounded-full">🔥Firebase Firestore</span>
-                        <span class="text-accent-color text-xs font-semibold bg-card-bg px-3 py-1 rounded-full">🎨Tailwind CSS</span>
-                        <span class="text-accent-color text-xs font-semibold bg-card-bg px-3 py-1 rounded-full">⚡Vite</span>
-                    </div>
-                    <a href="https://github.com/SightseR/shoe-management-app" target="_blank" class="text-accent-color inline-flex items-center gap-1 font-medium hover:underline hover:gap-2 transition-all duration-300">
-                        View on GitHub <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                    </a>
-                </div>
-                <div class="project-card">
-                    <h3 class="text-xl font-bold text-text-color mb-2">Vehicle Service App</h3>
-                    <p class="text-text-color opacity-80 text-sm mb-4">The Vehicle Service App is a web application built with React and Firebase to manage vehicle service records. 
-                        Users can register vehicle inspections, view and manage records, print service details as A4-sized PDFs, and download all records as a CSV file. 
-                        It's ideal for automotive service centers or individual vehicle owners looking to keep track of service history.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="text-accent-color text-xs font-semibold bg-card-bg px-3 py-1 rounded-full">⚛️React</span>
-                        <span class="text-accent-color text-xs font-semibold bg-card-bg px-3 py-1 rounded-full">🔥Firebase Firestore</span>
-                        <span class="text-accent-color text-xs font-semibold bg-card-bg px-3 py-1 rounded-full">🎨Tailwind CSS</span>
-                        <span class="text-accent-color text-xs font-semibold bg-card-bg px-3 py-1 rounded-full">⚡Vite</span>
-                    </div>
-                    <a href="https://github.com/SightseR/vehicle-service-app" target="_blank" class="text-accent-color inline-flex items-center gap-1 font-medium hover:underline hover:gap-2 transition-all duration-300">
-                        View on GitHub <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                    </a>
-                </div>
-            </div>
-        </section>
+    // Theme Toggle
+    const themeToggle = document.querySelector('#theme-toggle');
+    const mobileThemeToggle = document.querySelector('#mobile-theme-toggle');
+    const html = document.documentElement;
 
-        <footer class="mt-20 text-center text-text-color opacity-70 text-sm py-6 border-t border-border-color">
-            © 2025  <a href="k3akalanka@gmail.com" target="_blank" class="text-accent-color inline-flex items-center gap-1 font-medium hover:underline hover:gap-2 transition-all duration-300">
-                        Kasun Akalanka
-                    </a>. Crafted with modern web technologies.
-        </footer>
-    </main>
+    function applyTheme(theme) {
+      console.log(`Applying theme: ${theme}`);
+      html.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+      console.log(`Stored theme in localStorage: ${localStorage.getItem('theme')}`);
+    }
 
+    function toggleTheme() {
+      console.log('Toggling theme');
+      const currentTheme = html.getAttribute('data-theme') || 'light';
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      applyTheme(newTheme);
+    }
+
+    // Initialize theme on page load
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      console.log(`Found saved theme: ${savedTheme}`);
+      applyTheme(savedTheme);
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      console.log('System prefers dark theme');
+      applyTheme('dark');
+    } else {
+      console.log('Defaulting to light theme');
+      applyTheme('light');
+    }
+
+    // Attach event listeners
+    if (themeToggle) {
+      themeToggle.addEventListener('click', () => {
+        console.log('Desktop theme toggle clicked');
+        toggleTheme();
+      });
+    }
+    if (mobileThemeToggle) {
+      mobileThemeToggle.addEventListener('click', () => {
+        console.log('Mobile theme toggle clicked');
+        toggleTheme();
+      });
+    }
+
+    // Close mobile menu when a nav link is clicked
+    document.querySelectorAll('#mobile-menu .nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Smooth Scroll for Nav Links
+    document.querySelectorAll('a.nav-link').forEach(link => {
+      if (link.getAttribute('href') && link.getAttribute('href').startsWith('#')) {
+        link.addEventListener('click', (e) => {
+          // Rely on scroll-smooth and scroll-mt-header-offset
+        });
+      }
+    });
+  </script>
 </body>
 </html>
