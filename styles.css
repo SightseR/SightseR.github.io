@@ -214,6 +214,7 @@ body.dark .theme-button:hover {
   width: 32px;
   height: 32px;
   cursor: pointer;
+  background-color: transparent;
 }
 
 @media (max-width: 768px) {
